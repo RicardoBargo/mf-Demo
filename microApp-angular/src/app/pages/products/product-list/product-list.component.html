@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-center align-items-center" *ngIf="isLoading">
+      <h4 class=" fw-bold">Loading...</h4>
+    </div>
+    <ng-container *ngIf="!isLoading">
+      <div>
+        <img src="https://dx23yqi1tewca.cloudfront.net/images/poiLogo/be7dbc56-e522-4a86-a7d4-f34093538d8e.jpg" alt="logo" class="mx-auto w-72" />
+      </div>
+      <div class="col-md-3" *ngFor="let product of products">
+        <app-product-card [product]="product"></app-product-card>
+      </div>
+    </ng-container>
+  </div>
+</div>
